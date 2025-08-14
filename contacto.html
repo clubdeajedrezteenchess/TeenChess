@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--
+  contacto.html — Página de contacto para Teen Chess
+  - Inspirada en https://www.fide.com/contacts/
+  - Reutiliza header/footer y estilos globales (estilos.css)
+  - Estilos específicos: /css/contacto.css
+  - Funcionalidades:
+      * Sección de redes sociales (Facebook, Instagram, TikTok, YouTube, WhatsApp)
+      * Formulario de contacto que abre el cliente de correo (mailto) con asunto y cuerpo prellenados
+      * Tarjetas de contacto (email, WhatsApp, teléfono)
+      * Mapa incrustado (Google Maps) — coordenadas por defecto: Lima, Perú (ajusta si quieres)
+      * Menú móvil funcional (misma funcionalidad que index.html)
+-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Teen Chess — Contacto</title>
+    <meta
+      name="description"
+      content="Contacto Teen Chess — redes sociales, formulario, ubicación y teléfono."
+    />
+
+    <!-- Fuentes y estilos base -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <link rel="stylesheet" href="/css/contacto.css" />
+  </head>
+  <body>
+    <!-- HEADER (reutilizado) -->
+    <header class="site-header" role="banner">
+      <div class="wrap header-row">
+        <a class="brand" href="/index.html" aria-label="Teen Chess — Inicio">
+          <img
+            src="/img/logo.png"
+            alt="Teen Chess logo"
+            class="brand-logo"
+            onerror="this.style.display='none'"
+          />
+          <span class="brand-name">Teen Chess</span>
+        </a>
+
+        <nav class="main-nav" role="navigation" aria-label="Menú principal">
+          <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="/html/about.html">NOTICIAS</a></li>
+            <li><a href="/html/eventos.html">EVENTOS</a></li>
+            <li><a href="/html/formación.html">FORMACIÓN</a></li>
+            <li><a href="/html/galeria.html">GALERÍA</a></li>
+            <li><a href="/html/contacto.html" aria-current="page">CONTACTO</a></li>
+          </ul>
+        </nav>
+
+        <div class="actions">
+          <a class="btn join" href="/html/contacto.html">Únete</a>
+          <button
+            id="menu-btn"
+            class="hamburger"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Abrir menú"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div id="mobile-menu" class="mobile-menu" hidden aria-hidden="true">
+        <div class="mobile-inner wrap">
+          <nav role="navigation" aria-label="Menú móvil">
+            <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="/html/about.html">NOTICIAS</a></li>
+            <li><a href="/html/eventos.html">EVENTOS</a></li>
+            <li><a href="/html/formación.html">FORMACIÓN</a></li>
+            <li><a href="/html/galeria.html">GALERÍA</a></li>
+            <li><a href="/html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="hero hero-contact"
+      aria-labelledby="contacto-hero-title"
+      style="background-image: url('/imagenes/hero-contact.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="hero-inner wrap">
+        <div class="hero-left">
+          <h1 id="contacto-hero-title">
+            Contacto — <span class="accent">Teen Chess</span>
+          </h1>
+          <p class="lead">
+            Escríbenos por redes, WhatsApp o usa el formulario. Estamos para
+            ayudarte con cursos, torneos y consultas.
+          </p>
+        </div>
+
+        <aside class="hero-card" aria-hidden="true">
+          <div class="card highlight">
+            <div class="card-body">
+              <strong>Horario de atención</strong>
+              <p class="muted small">Lun–Vie: 16:00–18:00 · Sáb: 16:00–18:00</p>
+              <p class="muted small">
+                WhatsApp:
+                <a
+                  href="https://wa.me/51929005460"
+                  target="_blank"
+                  rel="noopener"
+                  >Enviar mensaje</a
+                >
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- MAIN: contacto y mapa -->
+    <main id="main" class="wrap main-grid" role="main">
+      <div class="content-col">
+        <section
+          class="section contact-section"
+          aria-labelledby="contact-main-title"
+        >
+          <header class="section-head">
+            <h2 id="contact-main-title">Ponte en contacto</h2>
+            <p class="muted">
+              Elige la forma que prefieras. También puedes visitarnos en nuestra
+              sede (ver mapa).
+            </p>
+          </header>
+
+          <!-- AREA: tarjetas de contacto + formulario -->
+          <div class="contact-grid">
+            <!-- Tarjetas de contacto (social + email + teléfono) -->
+            <div class="contact-cards">
+              <div class="card contact-card social">
+                <h3>Redes sociales</h3>
+                <p class="muted">
+                  Síguenos y mantente al día con torneos y novedades.
+                </p>
+                <ul class="social-links" aria-label="Redes sociales">
+                  <li>
+                    <a
+                      href="https://web.facebook.com/AjedrezenIquitos?locale=es_LA"
+                      target="_blank"
+                      rel="noopener"
+                      class="social-item"
+                      ><svg
+                        aria-hidden="true"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07C2 17.11 5.64 21.24 10.44 22v-7.02H8.08v-2.9h2.36V9.41c0-2.33 1.38-3.61 3.5-3.61.99 0 2.02.18 2.02.18v2.22h-1.14c-1.13 0-1.48.7-1.48 1.42v1.7h2.52l-.4 2.9h-2.12V22C18.36 21.24 22 17.11 22 12.07z"
+                        />
+                      </svg>
+                      Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/clubdeajedrezteenchess/"
+                      target="_blank"
+                      rel="noopener"
+                      class="social-item"
+                      ><svg
+                        aria-hidden="true"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.6A4.4 4.4 0 1016.4 13 4.4 4.4 0 0012 8.6zm6.8-.9a1.1 1.1 0 11-1.1-1.1 1.1 1.1 0 011.1 1.1z"
+                        />
+                      </svg>
+                      Instagram</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.tiktok.com/@clubdeajedrezteenchess"
+                      target="_blank"
+                      rel="noopener"
+                      class="social-item"
+                      ><svg
+                        aria-hidden="true"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 2v12.5A4.5 4.5 0 1110.5 9V2h1.5zM19 8.5a3.5 3.5 0 01-3.5-3.5h-1a4.5 4.5 0 004.5 4.5V22h-2v-7.5z"
+                        />
+                      </svg>
+                      TikTok</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/@clubdeajedrezteenchess8778"
+                      target="_blank"
+                      rel="noopener"
+                      class="social-item"
+                      ><svg
+                        aria-hidden="true"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M10 15l5.2-3L10 9v6zM21.8 8s-.2-1.6-.8-2.3c-.7-.9-1.4-.9-1.8-1C15.6 4 12 4 12 4h-.1s-3.6 0-7.2.7c-.5.1-1.1.1-1.8 1C2.5 6.4 2.3 8 2.3 8S2 9.9 2 11.9v.2C2 14.1 2.3 16 2.3 16s.2 1.6.9 2.3c.7.9 1.7.9 2.1 1 1.5.2 6 .7 6 .7s3.6 0 7.2-.7c.5-.1 1.1-.1 1.8-1 .6-.7.8-2.3.8-2.3s.3-1.9.3-3.9v-.2c0-2-.3-3.9-.3-3.9z"
+                        />
+                      </svg>
+                      YouTube</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://wa.me/51929005460"
+                      target="_blank"
+                      rel="noopener"
+                      class="social-item"
+                      ><svg
+                        aria-hidden="true"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M20.5 3.5A11 11 0 1012 23a10.7 10.7 0 007.5-2.8L23 22l-2.7-3.4A11 11 0 0020.5 3.5zM12 20.9a8.9 8.9 0 01-4.7-1.3l-.3-.2-3.1.8.8-3.1-.2-.3A8.9 8.9 0 113 12 8.9 8.9 0 0112 20.9zM16 13.1c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.4-.9.9-1.1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.4.3-.7.1-.2 0-.5-.1-.7-.1-.2-.7-1.7-1-2.4-.3-.6-.6-.5-.9-.5-.3 0-.6 0-.9 0-.3 0-.7.1-1 .3-.3.2-.8.9-.8 2.1 0 1.2.8 2.4 1 2.6.2.2 1.7 2.6 4.2 3.6 2.5 1 3.7 1 4.3.9.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4 0-.1-.1-.2-.4-.3z"
+                        />
+                      </svg>
+                      WhatsApp</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card contact-card email">
+                <h3>Correo</h3>
+                <p class="muted">
+                  Escríbenos a nuestra bandeja de correo para información
+                  general o propuestas.
+                </p>
+                <a
+                  class="btn ghost"
+                  href="mailto:clubdeajedrezteenchess@gmail.com?subject=Consulta%20desde%20sitio%20web"
+                  target="_blank"
+                  rel="noopener"
+                  >Enviar correo</a
+                >
+              </div>
+
+              <div class="card contact-card phone">
+                <h3>Teléfono</h3>
+                <p class="muted">Llámanos para asistencia rápida.</p>
+                <a class="btn ghost" href="tel:+51900000000">+51 929 005 460</a>
+              </div>
+            </div>
+
+            <!-- Formulario de contacto (abre cliente mailto con datos prellenados) -->
+            <div class="card contact-form">
+              <h3>Escríbenos</h3>
+              <form
+                id="contact-form"
+                action="#"
+                method="post"
+                onsubmit="return false;"
+              >
+                <label for="name">Nombre</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Tu nombre"
+                />
+
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="tu@correo.com"
+                />
+
+                <label for="subject">Asunto</label>
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="Asunto"
+                />
+
+                <label for="message">Mensaje</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                  placeholder="Escribe tu mensaje aquí..."
+                ></textarea>
+
+                <div class="form-actions">
+                  <button id="send-mail" class="btn join" type="submit">
+                    Enviar por email
+                  </button>
+                  <a
+                    class="btn ghost"
+                    id="send-wa"
+                    href="https://wa.me/51929005460"
+                    target="_blank"
+                    rel="noopener"
+                    >WhatsApp</a
+                  >
+                </div>
+
+                <p class="muted small">
+                  Al enviar el formulario se abrirá tu cliente de correo con el
+                  mensaje prellenado.
+                </p>
+              </form>
+            </div>
+          </div>
+
+          <!-- Ubicación / mapa -->
+          <div class="map-card card">
+            <h3>Nuestra ubicación</h3>
+            <p class="muted">
+              Visítanos en nuestra sede principal. (Pin en el mapa aproximado —
+              ajusta coordenadas si es necesario.)
+            </p>
+            <!-- Map embed: coordenadas por defecto (Lima, Perú). Si quieres otra ubicación, cambia la query del src. -->
+            <div class="map-wrap" aria-hidden="false">
+              <iframe
+                title="Mapa de Teen Chess"
+                width="100%"
+                height="360"
+                frameborder="0"
+                style="border: 0"
+                src="https://maps.app.goo.gl/srkyJ6xk9TqA5Rat7"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- SIDEBAR con info adicional -->
+      <aside class="sidebar-col" aria-label="Barra lateral contacto">
+        <div class="sidebar-widget card">
+          <h4 class="widget-title">Dirección</h4>
+          <p class="muted">Calle 16 de Julio #725</p>
+        </div>
+
+        <div class="sidebar-widget card opening">
+          <h4 class="widget-title">Atención</h4>
+          <ul>
+            <li>Lun–Vie: 10:00–19:00</li>
+            <li>Sáb: 09:00–13:00</li>
+            <li>Dom: Cerrado</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-compact wrap">
+        <div class="footer-top-compact">
+          <div class="brand-area-compact">
+            <img
+              src=""
+              alt="Teen Chess logo"
+              class="brand-badge small"
+              onerror="this.style.display='none'"
+            />
+            <div>
+              <strong>Teen Chess</strong>
+              <p class="muted small">
+                Club juvenil de ajedrez — formación y competencia.
+              </p>
+            </div>
+          </div>
+
+          <nav class="footer-links-compact" aria-label="Enlaces pie">
+            <a href="https://web.facebook.com/AjedrezenIquitos?locale=es_LA"
+              >Facebook</a
+            >
+            <a href="https://www.instagram.com/clubdeajedrezteenchess/"
+              >Instagram</a
+            >
+            <a href="https://www.tiktok.com/@clubdeajedrezteenchess">Tik Tok</a>
+            <a href="https://www.fide.com/">FIDE</a>
+          </nav>
+        </div>
+
+        <div class="footer-bottom-compact">
+          <small>© 2025 Teen Chess — Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS: formulario -> mailto prellenado + menú móvil -->
+    <script>
+      // Form: construir mailto con campos del formulario
+      (function () {
+        const form = document.getElementById("contact-form");
+        const sendBtn = document.getElementById("send-mail");
+
+        function encode(s) {
+          return encodeURIComponent(s || "");
+        }
+
+        sendBtn &&
+          sendBtn.addEventListener("click", function (e) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject =
+              document.getElementById("subject").value.trim() ||
+              "Contacto desde web";
+            const message = document.getElementById("message").value.trim();
+
+            if (!name || !email || !message) {
+              alert(
+                "Por favor completa los campos requeridos: nombre, email y mensaje."
+              );
+              return;
+            }
+
+            const body = `Nombre: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${encode(
+              message
+            )}`;
+            const mailto = `mailto:clubdeajedrezteenchess@gmail.com?subject=${encode(
+              subject
+            )}&body=${body}`;
+            // Abrir cliente de correo
+            window.location.href = mailto;
+          });
+      })();
+
+      /* Mobile menu script (misma funcionalidad que index.html) */
+      (function () {
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        function openMenu() {
+          mobileMenu.classList.add("open");
+          mobileMenu.removeAttribute("hidden");
+          mobileMenu.setAttribute("aria-hidden", "false");
+          menuBtn.setAttribute("aria-expanded", "true");
+          document.body.style.overflow = "hidden";
+        }
+        function closeMenu() {
+          mobileMenu.classList.remove("open");
+          mobileMenu.setAttribute("aria-hidden", "true");
+          menuBtn.setAttribute("aria-expanded", "false");
+          setTimeout(() => mobileMenu.setAttribute("hidden", ""), 220);
+          document.body.style.overflow = "";
+        }
+
+        menuBtn &&
+          menuBtn.addEventListener("click", () => {
+            const isOpen = mobileMenu.classList.toggle("open");
+            if (isOpen) openMenu();
+            else closeMenu();
+          });
+
+        mobileMenu &&
+          mobileMenu.addEventListener("click", (e) => {
+            if (e.target === mobileMenu) closeMenu();
+          });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && mobileMenu.classList.contains("open"))
+            closeMenu();
+        });
+      })();
+    </script>
+  </body>
+</html>
