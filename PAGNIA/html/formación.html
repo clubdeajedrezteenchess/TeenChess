@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--
+  formacion.html — Página de Formación / Cursos
+  - Mantiene la cabecera / footer de tu sitio y reutiliza estilos.css.
+  - Añade estilos propios en /css/formacion.css
+  - Contiene secciones: Intro, Cursos (Básico / Intermedio / Especiales), Instructores, FAQ.
+  - Botones "Inscribirse" abren WhatsApp con mensaje prellenado. Reemplaza PHONE_NUMBER por tu número (ej. 51987654321).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teen Chess — Formación</title>
+  <meta name="description" content="Formación en ajedrez: cursos básico, intermedio y talleres. Inscripciones vía WhatsApp." />
+
+  <!-- Fuentes y estilos base -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/estilos.css" />
+  <link rel="stylesheet" href="/css/formacion.css" />
+</head>
+<body>
+  <!-- HEADER (reutilizado) -->
+  <header class="site-header" role="banner">
+    <div class="wrap header-row">
+      <a class="brand" href="/index.html" aria-label="Teen Chess — Inicio">
+        <img src="/img/logo.png" alt="Teen Chess logo" class="brand-logo" onerror="this.style.display='none'"/>
+        <span class="brand-name">Teen Chess</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="/html/about.html">NOTICIAS</a></li>
+          <li><a href="/html/eventos.html">EVENTOS</a></li>
+          <li><a href="/html/formación.html" aria-current="page">FORMACIÓN</a></li>
+          <li><a href="/html/galeria.html">GALERÍA</a></li>
+          <li><a href="/html/contacto.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a class="btn join" href="/html/contacto.html">Únete</a>
+        <button id="menu-btn" class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="mobile-menu" hidden aria-hidden="true">
+      <div class="mobile-inner wrap">
+        <nav role="navigation" aria-label="Menú móvil">
+          <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="/html/about.html">NOTICIAS</a></li>
+            <li><a href="/html/eventos.html">EVENTOS</a></li>
+            <li><a href="/html/formación.html">FORMACIÓN</a></li>
+            <li><a href="/html/galeria.html">GALERÍA</a></li>
+            <li><a href="/html/contacto.html">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / Intro -->
+  <section class="hero hero-courses" aria-labelledby="courses-title" style="background-image: url('/imagenes/hero-classes.jpg')">
+    <div class="overlay"></div>
+    <div class="hero-inner wrap">
+      <div class="hero-left">
+        <h1 id="courses-title">Formación — <span class="accent">Cursos Teen Chess</span></h1>
+        <p class="lead">Programas diseñados para acompañar el crecimiento de jóvenes jugadores: desde lo básico hasta preparación competitiva.</p>
+        <p class="muted">Inscripciones por WhatsApp — plazas limitadas.</p>
+      </div>
+
+      <aside class="hero-card" aria-hidden="true">
+        <div class="card highlight">
+          <div class="card-body">
+            <strong>Contacto / Inscripciones</strong>
+            <p class="muted small">WhatsApp: <a href="https://wa.me/51929005460" target="_blank" rel="noopener">Enviar mensaje</a></p>
+            <p class="muted small">Horarios flexibles — opciones online y presencial.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- MAIN: Cursos + Sidebar -->
+  <main id="main" class="wrap main-grid" role="main">
+    <!-- Contenido -->
+    <div class="content-col">
+      <section class="section courses-section" aria-labelledby="courses-overview">
+        <header class="section-head">
+          <h2 id="courses-overview">Nuestros programas</h2>
+          <p class="muted">Elige el nivel que más te conviene y presiona <strong>Inscribirse</strong> para contactarnos por WhatsApp.</p>
+        </header>
+
+        <!-- GRID de niveles -->
+        <div class="courses-grid">
+          <!-- BASICO -->
+          <article class="course-card card">
+            <div class="course-head">
+              <h3>BÁSICO</h3>
+              <span class="level-tag">Nivel inicial</span>
+            </div>
+            <img src="/img/campeon.jpg"Curso Básico" class="course-img" loading="lazy" />
+            <div class="course-body">
+              <p class="muted">Ideal para quienes se inician en el ajedrez: reglas, aperturas simples, tácticas básicas y práctica guiada.</p>
+              <ul class="course-list">
+                <li>Duración: 4 semanas (3 sesiones/semana)</li>
+                <li>Formato: Presencial / Online</li>
+                <li>Sin pago de Matricula</li>
+              </ul>
+              <div class="course-meta">
+                <div class="price">S/ 150</div>
+                <div class="action">
+                  <a class="btn join" href="https://wa.me/51929005460" target="_blank" rel="noopener">Inscribirse</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- INTERMEDIO -->
+          <article class="course-card card">
+            <div class="course-head">
+              <h3>INTERMEDIO</h3>
+              <span class="level-tag">Mejora táctica</span>
+            </div>
+            <img src="/img/copa mateo.jpg" alt="Curso Intermedio" class="course-img" loading="lazy" />
+            <div class="course-body">
+              <p class="muted">Aperturas, estrategia posicional, tácticas avanzadas y análisis de partidas para torneos.</p>
+              <ul class="course-list">
+                <li>Duración: 4 semanas (3 sesiones/semana)</li>
+                <li>Medio Juego y Finales</li>
+                <li>Acceso a material digital</li>
+              </ul>
+              <div class="course-meta">
+                <div class="price">S/ 180</div>
+                <div class="action">
+                  <a class="btn join" href="https://wa.me/51929005460" target="_blank" rel="noopener">Inscribirse</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ESPECIALES / TALLERES -->
+          <article class="course-card card">
+            <div class="course-head">
+              <h3>TALLERES</h3>
+              <span class="level-tag">Temáticos</span>
+            </div>
+            <img src="/img/entrenamiento.jpg" alt="Talleres" class="course-img" loading="lazy" />
+            <div class="course-body">
+              <p class="muted">Cursos cortos y talleres: finales esenciales, entrenamiento táctico, preparación para torneos, coaching personalizado.</p>
+              <ul class="course-list">
+                <li>Duración: 1–4 sesiones (según taller)</li>
+                <li>Formato: Online / Intensivos presenciales</li>
+                <li>Fechas rotativas</li>
+              </ul>
+              <div class="course-meta">
+                <div class="price">PROX.</div>
+                <div class="action">
+                  <a class="btn join" href="https://wa.me/51929005460" target="_blank" rel="noopener">Consultar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- CTA general -->
+        <div class="cta-large card">
+          <h3>¿No estás seguro de tu nivel?</h3>
+          <p class="muted">Agendamos una valoración rápida por WhatsApp para recomendarte el plan ideal.</p>
+          <a class="btn join large" href="https://wa.me/51929005460" target="_blank" rel="noopener">Solicitar valoración</a>
+        </div>
+
+        <!-- INSTRUCTORES -->
+        <section class="instructors card">
+          <h3>Instructores</h3>
+          <div class="instructors-grid">
+            <div class="instructor">
+              <img src="/img/profe.jpg" alt="Entrenador 1" loading="lazy" />
+              <strong>FERNANDO MURRIETA NUÑEZ</strong>
+              <p class="muted small">Entrenador y Arbitro Nacional — Profesor de Ajedrez Educativo de la Unión Europea de Ajedrez</p>
+            </div>
+
+        <!-- FAQ -->
+        <section class="faq card">
+          <h3>Preguntas frecuentes</h3>
+          <details>
+            <summary>¿Cómo me inscribo?</summary>
+            <p class="muted">Pulsa "Inscribirse" en el curso deseado y envía el mensaje por WhatsApp. Te responderemos con pasos para el pago y confirmación.</p>
+          </details>
+          <details>
+            <summary>¿Hay certificado?</summary>
+            <p class="muted">Sí, emitimos certificado de asistencia en cursos completos (según requisitos del programa).</p>
+          </details>
+          <details>
+            <summary>¿Puedo cambiar de modalidad (presencial/online)?</summary>
+            <p class="muted">En la mayoría de casos sí — coordina con el equipo por WhatsApp.</p>
+          </details>
+        </section>
+      </section>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar-col" aria-label="Barra lateral formacion">
+      <div class="sidebar-widget card contact-quick">
+        <h4 class="widget-title">Contacto rápido</h4>
+        <p class="muted">¿Dudas? Escríbenos por WhatsApp:</p>
+        <a class="btn join block" href="https://wa.me/51929005460" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+
+      <div class="sidebar-widget card schedule">
+        <h4 class="widget-title">Horarios frecuentes</h4>
+        <ul>
+          <li>Martes y Jueves — 16:00–18:00</li>
+          <li>Sábados — 09:00–12:00</li>
+          <li>Sesiones online bajo demanda</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget card resources">
+        <h4 class="widget-title">Recursos</h4>
+        <ul>
+            <li><a href="https://chess-results.com/">Chess-Results</a></li>
+            <li><a href="https://es.chessbase.com/">Chess Base</a></li>
+            <li><a href="https://federacionperuanadeajedrez.org/">FDPA</a></li>
+            <li><a href="https://norwaychess.no/en/">NORWAN CHESS</a></li>
+            <li><a href="https://lichess.org/">Lichess</a></li>
+            <li><a href="https://www.chess.com/es/login">Chess.Com</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-compact wrap">
+      <div class="footer-top-compact">
+        <div class="brand-area-compact">
+          <img src="" alt="Teen Chess logo" class="brand-badge small" onerror="this.style.display='none'"/>
+          <div>
+            <strong>Teen Chess</strong>
+            <p class="muted small">Club juvenil de ajedrez — formación y competencia.</p>
+          </div>
+        </div>
+
+        <nav class="footer-links-compact" aria-label="Enlaces pie">
+          <a href="https://web.facebook.com/AjedrezenIquitos?locale=es_LA">Facebook</a>
+          <a href="https://www.instagram.com/clubdeajedrezteenchess/">Instagram</a>
+          <a href="https://www.tiktok.com/@clubdeajedrezteenchess">Tik Tok</a>
+            <a href="https://www.fide.com/">FIDE</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom-compact">
+        <small>© 2025 Teen Chess — Todos los derechos reservados.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS: menú móvil (misma funcionalidad que index.html) -->
+  <script>
+    (function () {
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      function openMenu() {
+        mobileMenu.classList.add("open");
+        mobileMenu.removeAttribute("hidden");
+        mobileMenu.setAttribute("aria-hidden", "false");
+        menuBtn.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
+      }
+      function closeMenu() {
+        mobileMenu.classList.remove("open");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        menuBtn.setAttribute("aria-expanded", "false");
+        setTimeout(()=> mobileMenu.setAttribute("hidden", ""), 220);
+        document.body.style.overflow = "";
+      }
+
+      menuBtn && menuBtn.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('open');
+        if (isOpen) openMenu(); else closeMenu();
+      });
+
+      mobileMenu && mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMenu();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape" && mobileMenu.classList.contains('open')) closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>

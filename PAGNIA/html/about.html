@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Teen Chess — Noticias destacadas</title>
+    <meta
+      name="description"
+      content="Noticias y artículos — Teen Chess. Resúmenes de torneos, miembro destacado y clases."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/estilos.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+  </head>
+  <body>
+    <!-- HEADER (reutiliza tu header del index) -->
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="mobile-menu" hidden aria-hidden="true">
+      <div class="mobile-inner wrap">
+        <nav role="navigation" aria-label="Menú móvil">
+          <ul>
+            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="/html/about.html">NOTICIAS</a></li>
+            <li><a href="/html/eventos.html">EVENTOS</a></li>
+            <li><a href="/html/formación.html">FORMACIÓN</a></li>
+            <li><a href="/html/galeria.html">GALERÍA</a></li>
+            <li><a href="/html/contacto.html">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <header class="site-header" role="banner">
+      <div class="wrap header-row">
+        <a class="brand" href="/index.html" aria-label="Teen Chess — Inicio">
+          <img
+            src="/img/logo.png"
+            alt="Teen Chess logo"
+            class="brand-logo"
+            onerror="this.style.display='none'"
+          />
+          <span class="brand-name">Teen Chess</span>
+        </a>
+
+        <nav class="main-nav" role="navigation" aria-label="Menú principal">
+          <ul>
+            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="/html/about.html" aria-current="page">NOTICIAS</a></li>
+            <li><a href="/html/eventos.html">EVENTOS</a></li>
+            <li><a href="/html/formación.html">FORMACIÓN</a></li>
+            <li><a href="/html/galeria.html">GALERÍA</a></li>
+            <li><a href="/html/contacto.html">CONTACTO</a></li
+          </ul>
+        </nav>
+
+        <div class="actions">
+          <a class="btn join" href="/html/contacto.html">Únete</a>
+          <button
+            id="menu-btn"
+            class="hamburger"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Abrir menú"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO / título corto -->
+    <section
+      class="hero hero-news"
+      aria-labelledby="news-hero-title"
+      style="background-image: url('/imagenes/hero.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="hero-inner wrap">
+        <div class="hero-left">
+          <h1 id="news-hero-title">
+            Noticias y artículos — <span class="accent">Teen Chess</span>
+          </h1>
+          <p class="lead">
+            Cuatro artículos destacados. Haz clic en “Leer más” para abrir el
+            contenido completo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN: contenido principal + sidebar (tipo FIDE) -->
+    <main class="wrap main-grid" id="main" role="main">
+      <!-- Columna principal: lista de 4 bloques -->
+      <div class="content-col">
+        <section
+          class="section news-collection"
+          aria-labelledby="collection-title"
+        >
+          <header class="section-head">
+            <h2 id="collection-title">Artículos destacados</h2>
+            <p class="muted">
+              Desarrolla cada noticia, añade fotos y contenido multimedia.
+            </p>
+          </header>
+
+          <div class="news-list-grid">
+            <!-- BLOQUE 1 -->
+            <article class="news-block card" id="news-1">
+              <div class="summary">
+                <img
+                  src="/img/ricardo paraguay 2.jpg"
+                  alt="Campeonato juvenil"
+                  class="summary-thumb"
+                  loading="lazy"
+                />
+                <div class="summary-body">
+                  <h3>XIII Panamericano Escolar Paraguay 2024 — Resumen</h3>
+                  <time datetime="2025-08-03">3 Ago 2025</time>
+                  <p class="muted">
+                    Ricardo demostró su gran habilidad y dedicación al deporte
+                    ciencia al alcanzar el tercer puesto como mejor jugador de
+                    Perú en la modalidad Blitz.
+                  </p>
+                  <button class="read-more" data-target="full-1">
+                    Leer más
+                  </button>
+                </div>
+              </div>
+
+              <!-- Contenido completo (oculto por defecto) -->
+              <div class="article-full" id="full-1" aria-hidden="true">
+                <button class="close-article" data-target="full-1">
+                  ← Volver
+                </button>
+                <h2>XIII Panamericano Escolar Paraguay 2024</h2>
+                <time datetime="2025-08-03">3 Agosto 2025</time>
+                <img
+                  src="/img/ricardo paraguay 3.jpg"
+                  alt="Galería Campeonato Juvenil"
+                  class="article-hero"
+                  loading="lazy"
+                />
+                <p>
+                  El Club de Ajedrez Teen Chess felicita con orgullo a Ricardo
+                  Dávila Ramos por su destacada participación en el XIII
+                  Panamericano Escolar Paraguay 2024, en la categoría Sub-13.
+                  Representando al Perú, Ricardo demostró su talento y
+                  disciplina al obtener el tercer puesto nacional en la
+                  modalidad Blitz, convirtiéndose en uno de los mejores
+                  ajedrecistas peruanos del torneo. Este logro es fruto de su
+                  dedicación, esfuerzo y pasión por el ajedrez, valores que
+                  inspiran a toda nuestra comunidad. ¡Enhorabuena, Ricardo!
+                  Estamos seguros de que este es solo el inicio de una
+                  trayectoria llena de éxitos en el tablero.
+                </p>
+
+                <p>Galería: <em>Ricardo en la Zona de Juego</em></p>
+
+                <!-- Ejemplo de video embebido (opcional) -->
+                <div class="embed-video">
+                  <iframe
+                    width="100%"
+                    height="360"
+                    src="/img/ricardo paraguay.jpg"
+                    title="Video"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </article>
+
+            <!-- BLOQUE 2 -->
+            <article class="news-block card" id="news-2">
+              <div class="summary">
+                <img
+                  src="/img/aniversario.jpg"
+                  alt="Clases intensivas"
+                  class="summary-thumb"
+                  loading="lazy"
+                />
+                <div class="summary-body">
+                  <h3>5to Aniversario del Club de Ajedrez Teen Chess</h3>
+                  <time datetime="2025-08-01">20 Jul 2025</time>
+                  <p class="muted">
+                    Celebrando el Aniversario de nuestro club.
+                  </p>
+                  <button class="read-more" data-target="full-2">
+                    Leer más
+                  </button>
+                </div>
+              </div>
+
+              <div class="article-full" id="full-2" aria-hidden="true">
+                <button class="close-article" data-target="full-2">
+                  ← Volver
+                </button>
+                <h2>5to Aniversario del Club de Ajedrez Teen Chess</h2>
+                <time datetime="2025-08-01">20 Jul 2025</time>
+                <img
+                  src="/img/familia teen chess.jpg"
+                  alt="Clases intensivas"
+                  class="article-hero"
+                  loading="lazy"
+                />
+                <p>
+                  Hoy celebramos cinco años de partidas inolvidables,
+                  aprendizajes compartidos y una pasión que nos une: el ajedrez.
+                  Gracias a cada integrante, entrenador, colaborador y familia
+                  que ha sido parte de esta historia. En este tablero llamado
+                  vida, Teen Chess ha demostrado que con estrategia, esfuerzo y
+                  comunidad, los sueños se hacen jaque mate. Sigamos moviendo
+                  piezas, formando campeones y creciendo juntos. ¡Vamos por
+                  muchos años más!.
+                </p>
+              </div>
+            </article>
+
+            <!-- BLOQUE 3 -->
+            <article class="news-block card" id="news-3">
+              <div class="summary">
+                <img
+                  src="/img/pan mateo.jpg"
+                  alt="Miembro destacado"
+                  class="summary-thumb"
+                  loading="lazy"
+                />
+                <div class="summary-body">
+                  <h3>
+                    XI Festival Panamericano Escolar de las Americas Santa Cruz
+                    - Bolivia 2022
+                  </h3>
+                  <time datetime="2025-07-28">26 Oct - 2 Nov 2022</time>
+                  <p class="muted">Miembro destacado: Mateo Tello Huaman</p>
+                  <button class="read-more" data-target="full-3">
+                    Leer más
+                  </button>
+                </div>
+              </div>
+
+              <div class="article-full" id="full-3" aria-hidden="true">
+                <button class="close-article" data-target="full-3">
+                  ← Volver
+                </button>
+                <h2>
+                  XI Festival Panamericano Escolar de las Americas Santa Cruz -
+                  Bolivia 2022
+                </h2>
+                <time datetime="2025-07-28">26 Oct - 2 Nov 2022</time>
+                <img
+                  src="/img/mateo 1 y mateo 2.jpg"
+                  alt="Mateo Tello"
+                  class="article-hero"
+                  loading="lazy"
+                />
+                <p>
+                  El Campeón Regional de Ajedrez Sub 9 de la Zona Oriente Mateo
+                  André Tello Huamán en el Panamericano Escolar de Ajedrez. El
+                  Campeonato Panamericano Escolar de Ajedrez se desarrolló en
+                  Bolivia - Santa Cruz de la Sierra del 26 Octubre al 2 de
+                  Noviembre. El Panamericano de Ajedrez fue una competencia muy
+                  dura donde participaron todos los campeones de Centro y Sur
+                  América siendo cada partida un gran desafío para nuestro
+                  talento Loreto. Mateo seguirá mejorando para dar más grandes
+                  batallas en cada campeonato que participe en representación
+                  del Perú. "El Campeonato estuvo difícil y cada partida fue muy
+                  agotadora" expresó Tello Huamán Felicitamos a la Familia de
+                  Mateo por el esfuerzo que realizó para cumplir con está cita
+                  internacional y le deseamos a Mateo muchos éxitos en su
+                  carrera Ajedrecística.
+                </p>
+              </div>
+            </article>
+
+            <!-- BLOQUE 4 -->
+            <article class="news-block card" id="news-4">
+              <div class="summary">
+                <img
+                  src="/img/amos mundial.jpg"
+                  alt="Finales esenciales"
+                  class="summary-thumb"
+                  loading="lazy"
+                />
+                <div class="summary-body">
+                  <h3>Campeonato Mundial Escolar de la FIDE - PANAMA 2022</h3>
+                  <time datetime="2025-07-20">10 Jul - 19 Jul 2022</time>
+                  <p class="muted">
+                    Primer ajedrecista Loretano en llegar a un Mundial de
+                    Ajedrez.
+                  </p>
+                  <button class="read-more" data-target="full-4">
+                    Leer más
+                  </button>
+                </div>
+              </div>
+
+              <div class="article-full" id="full-4" aria-hidden="true">
+                <button class="close-article" data-target="full-4">
+                  ← Volver
+                </button>
+                <h2>Campeonato Mundial Escolar de la FIDE - PANAMA 2022</h2>
+                <time datetime="2025-07-20">10 Jul - 19 Jul 2022</time>
+                <img
+                  src="/img/mesa 2 amos.jpg"
+                  alt="Finales de ajedrez"
+                  class="article-hero"
+                  loading="lazy"
+                />
+                <p>
+                  Amos Aaron el primer Loretano en participar en un Mundial de
+                  Ajedrez. El Campeonato Mundial Escolar de Ajedrez ha terminado
+                  luego de 10 días de competencia y por su puesto desde la Zona
+                  Oriente de Ajedrez queremos felicitar a nuestros gran
+                  representante Amos Aaron Arrué Rengifo por su gran desempeño
+                  en el magno evento. El Mundial Escolar de Ajedrez reunió a 37
+                  países de diferentes partes del mundo y Amos fue uno de los
+                  representantes de la selección Peruana de Ajedrez. Amos
+                  realizó una tremenda hazaña al obtener 4 puntos de 9 rondas en
+                  su primer Mundial de Ajedrez, entendiéndose que jugo en la
+                  categoría sub 11 cuándo tiene tan solo 9 años de edad. Todo un
+                  gran esfuerzo realizó la familia de Arrué Rengifo para hacerle
+                  participar en el evento realizado en Panamá por lo cual
+                  queremos felicitar a su familia por el compromiso con su niño.
+                  "Siento que pude dar más pero volveré" manifestó Amos Arrué
+                  Rengifo. "Mi hijo ya cumplió y estoy muy orgulloso, yo le
+                  apoyaré hasta el final, siempre" expresó el padre de Amos,
+                  Jorge Luis Arrué Flores. Muchos éxitos Próximos Aaron y
+                  bendiciones a tu hermosa familia.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <!-- SIDEBAR: lista "Más en el tema" tipo FIDE -->
+      <aside class="sidebar-col" aria-label="Barra lateral">
+        <div class="sidebar-widget card related">
+          <h4 class="widget-title">Más en el tema</h4>
+          <ul class="related-list">
+            <li>
+              <a href="https://web.facebook.com/share/p/1B7iG72qqs/">
+                <img src="/img/clases de ajedrez.png" alt="mini" />
+                <div>
+                  <strong>Clases Intensivas</strong>
+                  <span class="muted small">26 Agos 2025</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#news-2">
+                <img src="/img/mateo.jpg" alt="mini" />
+                <div>
+                  <strong>Miembro destacado</strong
+                  ><span class="muted small"> Mateo Tello Huaman</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#news-3">
+                <img src="/img/entrenamiento.jpg" alt="mini" />
+                <div>
+                  <strong>Próxima reunión del Comite</strong
+                  ><span class="muted small"> Sin Fecha</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#news-4">
+                <img src="/img/todos.jpg" alt="mini" />
+                <div>
+                  <strong>Próximo Torneo Presencial</strong
+                  ><span class="muted small"> Sin Fin Fecha</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- puedes mantener otros widgets (shop, subscribe...) reutilizando tu markup -->
+        <div class="sidebar-widget card shop">
+          <h4 class="widget-title">ONLINE SHOP</h4>
+          <img
+            src="/img/foto 3.jpg"
+            alt="Promoción"
+            class="shop-img"
+            loading="lazy"
+          />
+          <p class="muted">Curso intensivo — plazas limitadas.</p>
+          <a
+            class="btn ghost block"
+            href="https://wa.me/51929005460"
+            target="_blank"
+            rel="noopener"
+            >Ver oferta</a
+          >
+        </div>
+      </aside>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-compact wrap">
+        <div class="footer-top-compact">
+          <div class="brand-area-compact">
+            <img
+              src=""
+              alt="Teen Chess logo"
+              class="brand-badge small"
+              onerror="this.style.display='none'"
+            />
+            <div>
+              <strong>Teen Chess</strong>
+              <p class="muted small">
+                Club juvenil de ajedrez — formación y competencia.
+              </p>
+            </div>
+          </div>
+
+          <nav class="footer-links-compact" aria-label="Enlaces pie">
+            <a href="https://web.facebook.com/AjedrezenIquitos?locale=es_LA"
+              >Facebook</a
+            >
+            <a href="https://www.instagram.com/clubdeajedrezteenchess/"
+              >Instagram</a
+            >
+            <a href="https://www.tiktok.com/@clubdeajedrezteenchess"
+              >Tik Tok</a
+            >
+          </nav>
+        </div>
+
+        <div class="footer-bottom-compact">
+          <small>© 2025 Teen Chess — Todos los derechos reservados.</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS: toggles para abrir/cerrar artículos en la misma página -->
+    <script>
+      document.querySelectorAll(".read-more").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.dataset.target;
+          const el = document.getElementById(id);
+          if (!el) return;
+          el.classList.add("expanded");
+          el.setAttribute("aria-hidden", "false");
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+      document.querySelectorAll(".close-article").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.dataset.target;
+          const el = document.getElementById(id);
+          if (!el) return;
+          el.classList.remove("expanded");
+          el.setAttribute("aria-hidden", "true");
+          // vuelve al resumen del bloque
+          const parent = btn.closest(".news-block");
+          parent &&
+            parent.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+      });
+
+      // enlaces de sidebar que apuntan a resumen: hacer scroll y abrir el resumen (no expande)
+      document.querySelectorAll(".related-list a").forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const href = a.getAttribute("href");
+          const target = document.querySelector(href);
+          if (target)
+            target.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+      });
+
+      (function () {
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        function openMenu() {
+          mobileMenu.classList.add("open");
+          mobileMenu.removeAttribute("hidden");
+          mobileMenu.setAttribute("aria-hidden", "false");
+          menuBtn.setAttribute("aria-expanded", "true");
+          document.body.style.overflow = "hidden"; // evita scroll del fondo
+        }
+
+        function closeMenu() {
+          mobileMenu.classList.remove("open");
+          mobileMenu.setAttribute("aria-hidden", "true");
+          menuBtn.setAttribute("aria-expanded", "false");
+          // dejamos tiempo a la animación para volver a esconderlo
+          setTimeout(() => mobileMenu.setAttribute("hidden", ""), 220);
+          document.body.style.overflow = ""; // restaura scroll
+        }
+
+        menuBtn &&
+          menuBtn.addEventListener("click", () => {
+            const isOpen = mobileMenu.classList.toggle("open");
+            if (isOpen) {
+              openMenu();
+            } else {
+              closeMenu();
+            }
+          });
+
+        // cerrar si hacen click fuera del panel (tap en el área oscura)
+        mobileMenu &&
+          mobileMenu.addEventListener("click", (e) => {
+            if (e.target === mobileMenu) closeMenu();
+          });
+
+        // cerrar con Esc (accesibilidad)
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && mobileMenu.classList.contains("open")) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

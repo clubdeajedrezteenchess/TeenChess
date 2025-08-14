@@ -1,0 +1,155 @@
+/* galeria.css — Diseño alternativo: tarjetas cuadradas con overlay centrado.
+   Complementa estilos.css y mantiene la paleta (var(--gold), var(--muted), etc).
+   Guardar en /css/galeria.css
+*/
+
+/* Controles: chips + buscador */
+.gallery-controls { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px; margin-top:12px; }
+.chips { display:flex; gap:8px; flex-wrap:wrap; }
+.chip {
+  background: transparent;
+  border: 1px solid rgba(11,11,11,0.06);
+  padding:8px 12px;
+  border-radius:999px;
+  font-weight:800;
+  cursor:pointer;
+}
+.chip.active {
+  background: var(--gold);
+  color: var(--black);
+  box-shadow: 0 12px 26px rgba(212,175,55,0.08);
+}
+.search-wrap input {
+  border:1px solid rgba(11,11,11,0.06);
+  padding:8px 10px;
+  border-radius:8px;
+  width: 220px;
+}
+
+/* GRID: tarjetas cuadradas */
+.clean-grid {
+  margin-top:12px;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Tarjeta (tile) */
+.tile {
+  margin:0;
+  padding:0;
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow: 0 10px 30px rgba(11,11,11,0.04);
+}
+.tile-btn {
+  width:100%;
+  height:100%;
+  border:0;
+  padding:0;
+  background:none;
+  display:block;
+  position:relative;
+  cursor:pointer;
+}
+
+/* imagen cuadrada: aspect-ratio para uniformidad */
+.tile-btn img {
+  width:100%;
+  height:100%;
+  aspect-ratio: 1 / 1;         /* tarjeta cuadrada */
+  object-fit: cover;           /* recorta sin deformar */
+  display:block;
+  transition: transform .22s cubic-bezier(.2,.9,.2,1);
+}
+
+/* overlay centrado (oculto por defecto, aparece en hover) */
+.overlay-content {
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:12px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.48));
+  color:#fff;
+  opacity:0;
+  transition: opacity .18s ease, transform .18s ease;
+  transform: translateY(6px);
+}
+.tile:hover .overlay-content,
+.tile:focus-within .overlay-content {
+  opacity:1;
+  transform: translateY(0);
+}
+.tile:hover img { transform: scale(1.04); }
+
+.overlay-title { font-family:'Merriweather', serif; font-weight:900; font-size:1.05rem; }
+.overlay-sub { font-size:0.9rem; color: rgba(255,255,255,0.9); margin-top:6px; }
+
+/* Lightbox minimalista */
+.clean-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  background: rgba(11,11,11,0.92);
+  padding: 24px;
+}
+.clean-lightbox.open { display:flex; }
+.clb-inner {
+  max-width: 1100px;
+  width: 100%;
+  display:flex;
+  gap: 20px;
+  align-items: center;
+}
+.clb-inner img { max-width: 72%; width: auto; height: auto; border-radius:8px; display:block; }
+.clb-meta { max-width: 360px; color:#fff; }
+.clb-meta h3 { margin:0 0 8px 0; font-size:1.3rem; font-family:'Merriweather', serif; }
+.clb-meta p { margin:0; color: rgba(255,255,255,0.86); }
+
+/* nav / close */
+.clb-close, .clb-nav {
+  position:absolute;
+  top:18px;
+  right:18px;
+  background:transparent;
+  border:0;
+  color:#fff;
+  font-size:26px;
+  cursor:pointer;
+}
+.clb-prev { left:18px; top:50%; transform:translateY(-50%); }
+.clb-next { right:18px; top:50%; transform:translateY(-50%); }
+
+/* Responsive grid: 1 / 2 / 3 / 4 columnas */
+@media (max-width:719px) {
+  .clean-grid { grid-template-columns: repeat(1, 1fr); }
+  .search-wrap input { width: 140px; }
+  .clb-inner { flex-direction:column; }
+  .clb-inner img { max-width:100%; height:auto; }
+  .clb-meta { max-width:100%; margin-top:12px; text-align:center; }
+}
+@media (min-width:720px) and (max-width:979px) {
+  .clean-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width:980px) and (max-width:1199px) {
+  .clean-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width:1200px) {
+  .clean-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Focus / accesibilidad */
+.tile-btn:focus { outline: 3px solid rgba(212,175,55,0.12); outline-offset:3px; border-radius:10px; }
+.chip:focus, .search-wrap input:focus { outline: 3px solid rgba(212,175,55,0.12); outline-offset:3px; border-radius:6px; }
+
+/* Pequeños detalles */
+.tile { transition: transform .18s ease, box-shadow .18s ease; }
+.tile:hover { transform: translateY(-6px); box-shadow: 0 22px 60px rgba(11,11,11,0.08); }

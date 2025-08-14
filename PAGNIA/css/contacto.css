@@ -1,0 +1,72 @@
+/* contacto.css — estilos específicos para la página de contacto
+   - Complementa estilos.css (variables: --gold, --muted, etc).
+   - Guardar en: /css/contacto.css
+*/
+
+/* HERO */
+.hero-contact { min-height: 200px; border-radius: 12px; background-size: cover; background-position:center; color:#fff; }
+.hero-contact .overlay { border-radius:12px; background: linear-gradient(180deg, rgba(0,0,0,0.48), rgba(0,0,0,0.12)); }
+
+/* MAIN LAYOUT */
+.contact-section .section-head { margin-bottom: 12px; }
+
+/* grid principal: tarjetas a la izquierda, sidebar a la derecha (definido también por main-grid) */
+.contact-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+/* agrupación de tarjetas de contacto (stack vertical) */
+.contact-cards { display: grid; gap:12px; }
+
+/* tarjetas individuales de contacto */
+.contact-card h3 { margin:0 0 6px 0; font-family:'Merriweather', serif; font-weight:900; }
+.social-links { list-style:none; padding:0; margin:8px 0 0 0; display:flex; flex-direction:column; gap:8px; }
+.social-item { display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:var(--black); background:transparent; padding:.5rem; border-radius:8px; transition: background .12s ease; }
+.social-item svg { color:var(--gold); }
+.social-item:hover { background: rgba(11,11,11,0.04); }
+
+/* Formulario */
+.contact-form { padding:12px; }
+.contact-form label { display:block; margin-top:8px; margin-bottom:6px; font-weight:700; }
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form input[type="search"], .contact-form textarea {
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid rgba(11,11,11,0.08);
+  font-size:1rem;
+  box-sizing:border-box;
+}
+.contact-form textarea { resize:vertical; min-height:120px; }
+
+/* acciones del formulario */
+.form-actions { display:flex; gap:10px; align-items:center; margin-top:12px; }
+.form-actions .btn { white-space:nowrap; }
+
+/* Mapa */
+.map-card { margin-top:16px; padding:12px; }
+.map-wrap iframe { border-radius:8px; width:100%; display:block; }
+
+/* SIDEBAR */
+.sidebar-widget .widget-title { margin:0 0 8px 0; font-weight:900; font-family:'Merriweather', serif; }
+
+/* Responsividad */
+@media (min-width:720px) {
+  .contact-grid { grid-template-columns: 1fr 360px; }
+  .contact-cards { grid-template-columns: 1fr; }
+  .contact-form { order: 2; }
+  .map-card { grid-column: 1 / -1; } /* mapa ocupa toda la anchura bajo las tarjetas en desktop */
+}
+
+@media (max-width:719px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .map-wrap iframe { height: 280px; }
+}
+
+/* Accesibilidad: focus visible */
+input:focus, textarea:focus, .social-item:focus, .btn:focus { outline: 3px solid rgba(212,175,55,0.12); outline-offset:3px; border-radius:6px; }
+
+/* Pequeños detalles estéticos */
+.card { transition: transform .18s ease, box-shadow .18s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(11,11,11,0.08); }
